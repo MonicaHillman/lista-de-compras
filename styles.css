@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "Agrandis";
+    src: url("./fonts/Agrandir-GrandHeavy.otf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #F55B64;
+    --cor-secundaria: #C2373F;
+    --neutro: #F9F9F9;
+    --preto: #131730;
+}
+
+
+h2 {
+    font-family: 'Agrandis';
+    color: var(--cor-primaria);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 33px;
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--cor-primaria);
+    margin-bottom: 24px;
+}
+
+p {
+    font-family: 'Numans', sans-serif;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+}
+
+body {
+    background: linear-gradient(180deg, #000000 0%, #26327F 100%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 440px;
+    background-color: var(--neutro);
+    padding: 56px;
+    align-items: center;
+    border-radius: 16px;
+}
+
+imagem {
+    width: 160px;
+}
+
+#itemInput {
+    display: block;
+    padding: 12px 16px;
+    gap: 10px;
+    border-radius: 24px;
+    border: 1px solid var(--preto);
+
+    width: 307px;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.container-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px
+}
+
+#adicionarBtn {
+
+    text-align: center;
+    padding: 12px 16px;
+
+    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    color: var(--neutro);
+    font-family: 'Numans', sans-serif;
+
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+}
+
+li {
+    display: flex;
+    gap: 12px
+}
+
+li span {
+    flex: 1;
+}
+
+li span p:last-child {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+}
+
+.list {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+/* Esconde o elemento real do checkbox */
+.checkboxInput {
+    display: none;
+}
+
+/* Estiliza o visual do checkbox */
+.customCheckbox {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* Estiliza o visual do checkbox quando marcado */
+.customCheckbox.checked {
+    background-color: black;
+    position: relative;
+}
+
+.customCheckbox.checked::after {
+    /* Estilo do check quando o checkbox está marcado */
+    content: "";
+    position: absolute;
+
+    left: 30%;
+    top: -10%;
+
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    transform: rotate(-140deg);
+}
+
+.checkboxContainer {
+    display: inline;
+}
+
+.item-title {
+    display: inline;
+    margin-left: 8px;
+}

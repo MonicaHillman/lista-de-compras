@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Numans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <main>
+        <img src="./img/bag.png" alt="sacola de compras" class="imagem" />
+
+        <div class="container-button">
+            <input type="text" id="itemInput" placeholder="Digite o item que deseja adicionar">
+            <button id="adicionarBtn">Salvar item</button>
+        </div>
+
+        <div class="list">
+
+            <div id="containerListaCompras">
+                <h2>Lista de Compras</h2>
+                <hr />
+                <ul id="listaDeCompras">
+                    <!-- A lista de compras será exibida aqui -->
+                </ul>
+
+                <p id="mensagemListaVazia" style="display: block;">Sua lista está vazia. Adicione itens a ela para não
+                    esquecer
+                    nada
+                    na próxima compra!</p>
+
+            </div>
+
+            <div id="containerListaComprados">
+                <h2>Comprados</h2>
+                <hr />
+                <ul id="comprados">
+
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script type="module" src="./scripts.js"></script>
+
+</body>
+
+</html>
