@@ -68,5 +68,29 @@ export function criarItemDaLista(item) {
     // Adicionar os elementos ao item da lista
     listItem.appendChild(spanItem);
 
+    // Remover
+    let botaoExcluir = document.createElement("button");
+    let imgExcluir = document.createElement("img");
+    imgExcluir.src = "img/delete.svg"; // Defina o caminho para a imagem que você quer usar
+    imgExcluir.alt = "Remover"; // Texto alternativo para acessibilidade
+    botaoExcluir.appendChild(imgExcluir); // Adiciona a imagem ao botão
+    botaoExcluir.addEventListener("click", function () {
+        excluirItem(listItem);
+    });
+
+    //Editar
+    let botaoEditar = document.createElement("button");
+    let imgEditar = document.createElement("img");
+    imgEditar.src = "img/edit.svg"; // Defina o caminho para a imagem que você quer usar
+    imgEditar.alt = "Editar"; // Texto alternativo para acessibilidade
+    botaoEditar.appendChild(imgEditar); // Adiciona a imagem ao botão
+    botaoEditar.addEventListener("click", function () {
+        editarItem(listItem);
+    });
+
+    // Adicionar os botões ao item da lista
+    listItem.appendChild(botaoExcluir);
+    listItem.appendChild(botaoEditar);
+
     return listItem;
 }
