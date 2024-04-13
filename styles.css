@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Agrandis";
-    src: url("./fonts/Agrandir-GrandHeavy.otf");
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,9 +13,8 @@
 
 
 h2 {
-    font-family: 'Agrandis';
+    font-family: 'Krona One';
     color: var(--cor-primaria);
-    font-weight: 800;
     font-size: 20px;
     line-height: 33px;
 }

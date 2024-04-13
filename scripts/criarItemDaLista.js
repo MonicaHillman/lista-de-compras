@@ -1,6 +1,8 @@
 import { gerarDiaDaSemana } from "./gerarDiaDaSemana.js";
 import { verificarListaComprados } from "./verificarListaComprados.js";
 import { verificarListaVazia } from "./verificarListaVazia.js";
+import { excluirItem } from "./excluirItem.js";
+import { editarItem } from "./editarItem.js";
 
 export function criarItemDaLista(item) {
     // Criar elementos HTML para o novo item
@@ -36,6 +38,7 @@ export function criarItemDaLista(item) {
     // Criar elemento de texto para a data
     let itemDate = document.createElement('p');
     itemDate.innerText = gerarDiaDaSemana();
+    itemDate.setAttribute("class", "data")
 
     // Adicionar itemText e itemDate ao spanItem
     spanItem.appendChild(checkboxContainer);

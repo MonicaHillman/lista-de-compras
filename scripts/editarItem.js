@@ -1,3 +1,5 @@
+import { gerarDiaDaSemana } from "./gerarDiaDaSemana.js";
+
 // Função para editar item
 export const editarItem = (element) => {
     let novoItem = prompt("Digite o novo nome do item:");
@@ -16,5 +18,10 @@ export const editarItem = (element) => {
             element.querySelector('.customCheckbox').classList.add('checked');
             itemTextElement.style.textDecoration = 'line-through';
         }
+
+        // Atualiza data de criação pra data que foi editado
+        const dataDeCriacao = element.querySelector(".data")
+
+        dataDeCriacao.textContent = gerarDiaDaSemana();
     }
 }
