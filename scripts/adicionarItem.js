@@ -1,12 +1,12 @@
 import { criarItemDaLista } from './criarItemDaLista.js';
 import { verificarListaVazia } from './verificarListaVazia.js';
 
-const item = document.getElementById("itemInput");
+const input = document.getElementById("itemInput");
 const lista = document.getElementById("listaDeCompras")
 
 // Função para adicionar um item à lista
-export function adicionarItem() {
-
+export function adicionarItem(evt) {
+    evt.preventDefault();
     const item = input.value;
 
     if (item === "") {
@@ -22,7 +22,7 @@ export function adicionarItem() {
     lista.appendChild(listItem);
 
     // Limpar o valor do input
-    item.value = "";
+    input.value = "";
 
     // Verificar se a lista está vazia e exibir a mensagem apropriada
     verificarListaVazia(lista);
